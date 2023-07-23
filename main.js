@@ -1,0 +1,112 @@
+const btn = document.querySelector('button');
+const div = document.querySelector('div');
+const namePrefixes = [
+  'own',
+  'better',
+  'excess',
+  'surplus',
+  'main',
+  'leftover',
+  'additional',
+  'extra',
+  'reserve',
+  'residual',
+  'trace',
+  'spare',
+  'non-normative',
+  'missing',
+  'due',
+  'absent',
+  'misplaced',
+  'remaining',
+  'only',
+  'single',
+  'present',
+  'non-existent',
+  'recent',
+  'aquired',
+  'removed',
+  'added',
+  'leveraged',
+  'utilised',
+  'stopped',
+  'protected',
+];
+const nameSuffixes = [
+  'grass',
+  'air',
+  'cat',
+  'wind',
+  'view',
+  'light',
+  'bottle opener',
+  'fridge space',
+  'arm length',
+  'baby',
+  'vehicle',
+  'bicycle',
+  'time',
+  'life',
+  'hobby',
+  'posture',
+  'demeanor',
+  'friends',
+  'family',
+  'vacation',
+  'sleep',
+  'rest',
+  'jogging',
+  'prayer',
+  'sunday',
+  'gift',
+  'lawn',
+  'fence',
+  'education',
+  'income',
+  'side-hustle',
+  'game',
+  'gender',
+  'bed',
+  'odor',
+  'attitude',
+  'trip',
+  'poop',
+  'wife',
+  'husband',
+  'protection',
+  'debt',
+  'reasoning',
+  'thinking',
+  'solution',
+  'idea',
+  'gratitude',
+  'anger',
+  'swearing',
+  'sweat',
+  'breath',
+];
+const taxSynonymes = [
+  'tax',
+  'levy',
+  'toll',
+  'fee',
+  'charge',
+  'customs',
+  'tribute',
+  'liability',
+  'contribution',
+  'tariff',
+];
+
+function rollElement(maxNumber) {
+  return Math.floor(Math.random() * maxNumber);
+}
+
+function taxNameRoll() {
+  let rolledName = namePrefixes[rollElement(namePrefixes.length)];
+  rolledName += ` ${nameSuffixes[rollElement(nameSuffixes.length)]}`;
+  rolledName += ` ${taxSynonymes[rollElement(taxSynonymes.length)]}`;
+  div.textContent = rolledName;
+}
+
+btn.addEventListener('click', taxNameRoll);
