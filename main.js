@@ -103,10 +103,10 @@ function rollElement(maxNumber) {
 }
 
 function taxNameRoll() {
-  let rolledName = namePrefixes[rollElement(namePrefixes.length)];
-  rolledName += ` ${nameSuffixes[rollElement(nameSuffixes.length)]}`;
-  rolledName += ` ${taxSynonymes[rollElement(taxSynonymes.length)]}`;
-  div.textContent = rolledName;
+  let finalName = namePrefixes[rollElement(namePrefixes.length)];
+  finalName += ` ${nameSuffixes[rollElement(nameSuffixes.length)]}`;
+  finalName += ` ${taxSynonymes[rollElement(taxSynonymes.length)]}`;
+  div.textContent = finalName;
 }
 
 btn.addEventListener('click', taxNameRoll);
