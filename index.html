@@ -4,40 +4,24 @@
 <head>
  <meta charset="UTF-8">
  <title>New tax idea</title>
- <style>
-  html {
-   font-family: arial;
-  }
-
-  button {
-   display: block;
-   margin: 50px auto 50px;
-   background-color: #ffeee9;
-   border: 5px solid #376668;
-   padding: 20px 50px;
-   font-size: 22px;
-   border-radius: 15px;
-  }
-
-  button:hover {
-   background-color: #69452e;
-   border: 5px solid #376668;
-   color: beige;
-  }
-
-  div {
-   margin: 10px;
-   font-size: 56px;
-   text-align: center;
-  }
- </style>
+ <link rel="stylesheet" href="css/style.css">
+ <script src="https://kit.fontawesome.com/895f0af7cc.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
- <button>if you are a politician, click here to get generate a new tax idea</button>
- <div></div>
+    <nav class="settings">
+        <div><i data-role="themeButton" class="fa-regular fa-moon"></i></div>
+    </nav>
+ <button data-type="rollName">if you are a politician, click here to get generate a new tax idea</button>
+ <div class="newAndShiny">
+    <p>all new and shiny</p>
+ </div>
+ <div class="taxContainer">
+    <div class="imageWow">
+        <p class="taxName"></p>
+    </div>
+ </div>
 
- <script src="main.js"></script>
+ <script src="js/main.js"></script>
 </body>
 
 </html>

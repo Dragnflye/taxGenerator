@@ -1,0 +1,123 @@
+  @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+  /* font-family: 'Play', sans-serif; */
+  /* font-family: 'Bungee Inline', cursive; */
+* {
+   padding: 0;
+   margin: 0;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+body.darkTheme {
+    background-color: rgb(27, 32, 33);
+}
+
+button {
+   display: block;
+   margin: 50px auto 50px;
+   background-color: rgb(220, 204, 187);
+   border: 5px solid rgb(163, 144, 228);
+   padding: 20px 50px;
+   font-size: 22px;
+   border-radius: 15px;
+   transition: .1s;
+}
+
+button:hover {
+    background-color: rgb(180, 164, 147);
+    border: 5px solid #376668;
+    /* color: beige; */
+}
+button.darkTheme {
+   background-color: rgb(70, 54, 37);
+   border: 5px solid rgb(73, 54, 138);
+   color: rgb(220, 204, 187);
+}
+
+button.darkTheme:hover {
+    background-color: #69452e;
+    border: 5px solid #376668;
+    color: beige;
+}
+.newAndShiny {
+    height: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.newAndShiny>p {
+    display: none;
+    text-align: center;
+    font-size: 42px;
+    font-family: 'Bungee Inline', cursive;
+    animation: fadeIn 2.2s ease-in forwards;
+    color: black;
+}
+.newAndShiny>p.darkTheme {
+    color: rgb(220, 204, 187);
+}
+
+.taxContainer {
+   width: auto;
+   height: 35vh;
+   font-size: 56px;
+   text-align: center;
+}
+@keyframes slap {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
+.taxContainer .imageWow {
+    display: none;
+    position: relative;
+    background-image: url('../wow.png');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-3%);
+    animation: slap .03s linear;
+}
+
+.taxContainer .taxName {
+    display: block;
+    position: absolute;
+    top: 49%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-family: 'Play', sans-serif;
+    font-size: 2.9vw;;
+    text-transform: uppercase;
+}
+
+nav.settings {
+    position: absolute;
+    cursor: pointer;
+    font-size: 50px;
+    font-weight: 300;
+    right: 2%;
+}
+nav.settings div i {
+    color: black;
+}
+nav.settings div i.darkTheme {
+    color: rgb(102, 143, 128);
+}
