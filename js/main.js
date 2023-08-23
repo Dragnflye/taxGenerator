@@ -93,14 +93,14 @@ const Roll = new RandomRoll();
 class UserInterface {
   constructor() {
     this.body = document.querySelector('body');
-    this.taxContainer = document.querySelector('.taxContainer');
-    this.newAndShiny = document.querySelector('.newAndShiny p');
-    this.imageWow = document.querySelector('.imageWow');
+    this.taxContainer = document.querySelector('.tax');
+    this.newAndShiny = document.querySelector('.taxIntro__text');
+    this.imageWow = document.querySelector('.tax__imageWow');
     this.btn = document.querySelector('[data-type="rollName"]');
     this.themeButton = document.querySelector('[data-role="themeButton"]');
     this.isActive = true;
     this.isDark = false;
-    this.nameDisplay = document.querySelector('.taxName');
+    this.nameDisplay = document.querySelector('.tax__name');
     this.btn.addEventListener('click', () => {
       this.displayChain();
     });

@@ -1,0 +1,8 @@
+$lightThemeBackgroundColor: #FCF7FF;
+$darkThemeBackgroundColor: #0B0014;
+$lightThemeMainColor: #FFD166;
+$lightThemeSecondaryColor: #EF476F;
+$lightThemeTertiaryColor: #037859;
+$darkThemeMainColor: darken($lightThemeMainColor, 50%);
+$darkThemeSecondaryColor: darken($lightThemeSecondaryColor, 50%);
+$darkThemeTertiaryColor: lighten($lightThemeTertiaryColor, 20%);

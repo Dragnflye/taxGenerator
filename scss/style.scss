@@ -1,0 +1,100 @@
+@import 'variables';
+@import 'animations';
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+/* font-family: 'Play', sans-serif; */
+/* font-family: 'Bungee Inline', cursive; */
+* {
+ padding: 0;
+ margin: 0;
+}
+
+.background {
+  background-color: $lightThemeBackgroundColor;
+    &.darkTheme {
+    background-color: $darkThemeBackgroundColor;
+    }
+}
+
+.button {
+  display: block;
+  margin: 50px auto 50px;
+  background-color: $lightThemeMainColor;
+  border: 5px solid $lightThemeSecondaryColor;
+  padding: 20px 50px;
+  font-size: 22px;
+  border-radius: 15px;
+  transition: .1s;
+    &:hover {
+      background-color: lighten($lightThemeMainColor, 10%);
+    }
+    &.darkTheme {
+      background-color: $darkThemeMainColor;
+      border: 5px solid $darkThemeSecondaryColor;
+      color: rgb(220, 204, 187);
+        &:hover {
+          background-color: lighten($darkThemeMainColor, 10%);
+        }
+    }
+}
+
+
+.taxIntro {
+height: 15vh;
+margin-left: auto;
+margin-right: auto;
+  &__text {
+    display: none;
+    text-align: center;
+    font-size: 42px;
+    font-family: 'Bungee Inline', cursive;
+    animation: fadeIn 2.2s ease-in forwards;
+    color: black;
+      &.darkTheme {
+        color: rgb(220, 204, 187);
+      }
+  }
+}
+
+.tax {
+ width: auto;
+ height: 35vh;
+ font-size: 56px;
+ text-align: center;
+  &__imageWow {
+    display: none;
+    position: relative;
+    background-image: url('../wow.png');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-3%);
+    animation: slap .03s linear;
+  }
+  &__name {
+    display: block;
+    position: absolute;
+    top: 49%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-family: 'Play', sans-serif;
+    font-size: 2.9vw;;
+    text-transform: uppercase; 
+}
+}
+
+.settings {
+  position: absolute;
+  cursor: pointer;
+  font-size: 50px;
+  font-weight: 300;
+  right: 2%;
+    &__themeIcon {
+      color: $lightThemeTertiaryColor;
+        &.darkTheme {
+           color: $darkThemeTertiaryColor;
+        }
+    }
+}
